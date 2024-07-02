@@ -1,0 +1,16 @@
+<!-- app/views/tasks/index.html.erb -->
+<h1>Liste des tâches</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <strong><%= task.title %></strong>
+      <p><%= task.details %></p>
+      <% if task.completed %>
+        <p>Status: Completed</p>
+      <% else %>
+        <p>Status: Incomplete</p>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
